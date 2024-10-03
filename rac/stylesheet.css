@@ -1,0 +1,18 @@
+
+body{
+    background: linear-gradient(to right, rgb(49, 127, 245), rgb(124, 186, 207), lightblue);
+}
+
+.cardDiv{
+ padding: 3%;
+ width: 40%;
+ background-color: whitesmoke;
+ text-align: center;
+ margin: 50px auto 0px auto;   
+border: 2px solid black;
+}
+
+#questionDiv{
+    margin-bottom: 10px;
+  
+}
