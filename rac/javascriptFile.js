@@ -27,12 +27,24 @@ function handleButtonClick(event) {
     let clickedButton = event.target;
 
     if (clickedButton.id == "yes" || clickedButton.id == "no") {
-        if (questions["questions"][questionnumber][clickedButton.id].next_question == null) {
-            questionDiv.textContent = questions["questions"][questionnumber][clickedButton.id].legal_reason;
+        
+        if (questions["questions"][questionnumber][clickedButton.id].next_question == "end_card") {
+            let tempLegalreason = questions["questions"][questionnumber][clickedButton.id].legal_reason;
+            questionLog.push(questionnumber);
+            questionnumber = questions["questions"][questionnumber][clickedButton.id].next_question;
+            questionDiv.textContent =  questions["questions"][questionnumber].end_card_text + ": " + tempLegalreason;           
             document.querySelectorAll(".choiceButton").forEach(button => { button.style.display = "none" });
-            document.querySelector("#restart").style.display = "block";
-            document.querySelector("#back").style.display = "none"; 
-        } else {
+            document.querySelector("#restart").style.display = "inline-block";
+           
+            
+        } else if(questions["questions"][questionnumber][clickedButton.id].next_question == "successful"){
+            questionnumber = questions["questions"][questionnumber][clickedButton.id].next_question;
+            questionDiv.textContent =  questions["questions"][questionnumber].successful_card_text;
+            document.querySelectorAll(".choiceButton").forEach(button => { button.style.display = "none" });
+            document.querySelector("#restart").style.display = "inline-block";
+        }
+        
+        else {
             questionLog.push(questionnumber); 
             questionnumber = questions["questions"][questionnumber][clickedButton.id].next_question;
             questionDiv.textContent = questions["questions"][questionnumber].question_text;
@@ -51,16 +63,17 @@ function handleButtonClick(event) {
 
     } else if (clickedButton.id == "back") {
         if (questionLog.length > 0) {
+ 
             questionnumber = questionLog.pop(); 
-            questionDiv.textContent = questions["questions"][questionnumber].question_text;
-
-           
+            questionDiv.textContent = questions["questions"][questionnumber].question_text;}
+            document.querySelectorAll(".choiceButton").forEach(button => {button.style.display = "inline-block"});
+            document.querySelector("#restart").style.display = "none"
             if (questionLog.length === 0) {
                 document.querySelector("#back").style.display = "none"; 
             }
         }
     }
-}
+
 
 document.addEventListener('DOMContentLoaded', function() {   
     fetchData();  
