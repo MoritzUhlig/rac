@@ -1,4 +1,4 @@
-const apiURL = "https://raw.githubusercontent.com/MoritzUhlig/my-json-api/main/data.json";
+apiURL = "https://raw.githubusercontent.com/MoritzUhlig/my-json-api/main/data.json";
 
 let questions;
 let questionnumber = "1";
@@ -45,7 +45,11 @@ function generateButtons() {
         buttonDiv.appendChild(button);
     });
 
-    document.querySelector("#back").style.display = questionnumber === "1" ? "none" : "inline-block";
+    if (questionnumber === "1") {
+        document.querySelector("#back").style.display = "none"; // Hide the back button if it's the first question
+    } else {
+        document.querySelector("#back").style.display = "inline-block"; // Show the back button if it's not the first question
+    }
 }
 
 function handleButtonClick(event) {
@@ -76,16 +80,28 @@ function handleButtonClick(event) {
 
         if (choice.next_question === "end_card") {
             questionLog.push(questionnumber);
-            let tempLegalReason = choice.legal_reason;
+            let legalReasonLinks = ""; // Initialize links variable
+
+            // Generate links for legal reasons
+            choice.legal_reason.forEach(reason => {
+                legalReasonLinks += `<a href="${reason.url}" target="_blank">${reason.text}</a> `;
+            });
+
             questionnumber = choice.next_question;
-            questionDiv.textContent = questions["questions"][questionnumber].end_card_text + ": " + tempLegalReason;
+            questionDiv.innerHTML = questions["questions"][questionnumber].end_card_text + ": " + legalReasonLinks;
             document.querySelectorAll(".choiceButton").forEach(button => button.style.display = "none");
             document.querySelector("#restart").style.display = "inline-block";
         } else if (choice.next_question === "successful") {
             questionLog.push(questionnumber);
-            let tempLegalReason = choice.legal_reason;
+            let legalReasonLinks = ""; // Initialize links variable
+
+            // Generate links for legal reasons
+            choice.legal_reason.forEach(reason => {
+                legalReasonLinks += `<a href="${reason.url}" target="_blank">${reason.text}</a> `;
+            });
+
             questionnumber = choice.next_question;
-            questionDiv.textContent = questions["questions"][questionnumber].successful_card_text + " " + tempLegalReason;
+            questionDiv.innerHTML = questions["questions"][questionnumber].successful_card_text + ": " + legalReasonLinks;
             document.querySelectorAll(".choiceButton").forEach(button => button.style.display = "none");
             document.querySelector("#restart").style.display = "inline-block";
         } else {
@@ -109,7 +125,8 @@ function updateHistory() {
 
     historyLog.forEach((entry, index) => {
         const historyItem = document.createElement("div");
-        historyItem.textContent = `${index + 1}. ${entry.question} - Answer: ${entry.answer}`;
+        historyItem.innerHTML = `${index + 1}. ${entry.question} - Answer: ${entry.answer}`; // Changed to innerHTML
+
         historyDiv.appendChild(historyItem);
     });
 }
