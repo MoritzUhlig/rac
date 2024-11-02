@@ -1,0 +1,178 @@
+{
+    "header": {
+        "law_name": "Tort Liability Act",
+        "description": "Outlines the rules for compensation when a person or entity causes harm through intent or negligence. Covers personal injury, property damage, and financial loss, with provisions for employer liability."
+    },
+    "questions": {
+        "1": {
+            "question_text": "Has damage occurred?",
+            "choices": {
+                "Yes": {
+                    "next_question": "2"
+                },
+                "No": {
+                    "legal_reason": [
+                        {
+                            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K2",
+                            "text": "Chapter 2, section 1 §"
+                        }
+                    ],
+                    "next_question": "end_card"
+                }
+            }
+        },
+        "2": {
+            "question_text": "Is there a contract between the parties?",
+            "choices": {
+                "Yes": {
+                    "next_question": "3"
+                },
+                "No": {
+                    "next_question": "4"
+                }
+            }
+        },
+        "3": {
+            "question_text": "Is the responsibility for damages regulated in the contract?",
+            "choices": {
+                "Yes": {
+                    "legal_reason": [
+                        {
+                            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K2",
+                            "text": "Chapter 2, section 1 §"
+                        }
+                    ],
+                    "next_question": "end_card"
+                },
+                "No": {
+                    "next_question": "4"
+                }
+            }
+        },
+        "4": {
+            "question_text": "Is the responsibility for tort regulated by another law?",
+            "choices": {
+                "Yes": {
+                    "legal_reason": [
+                        {
+                            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K2",
+                            "text": "Chapter 2, section 1 §"
+                        }
+                    ],
+                    "next_question": "end_card"
+                },
+                "No": {
+                    "legal_reason": [
+                        {
+                            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K2",
+                            "text": "Chapter 2, section 1 §"
+                        }
+                    ],
+                    "next_question": "5"
+                }
+            }
+        },
+        "5": {
+            "question_text": "Is there an adequate causality based upon the action of the person? Could a reasonable person have predicted that this action would likely lead to this type of damages?",
+            "choices": {
+                "Yes": {
+                    "next_question": "6"
+                },
+                "No": {
+                    "legal_reason": [
+                        {
+                            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K2",
+                            "text": "Chapter 2, section 1 §"
+                        }
+                    ],
+                    "next_question": "end_card"
+                }
+            }
+        },
+        "6": {
+            "question_text": "Has the damage occurred intentionally or by negligence?",
+            "choices": {
+                "Yes": {
+                    "next_question": "7"
+                },
+                "No": {
+                    "legal_reason": [
+                        {
+                            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K2",
+                            "text": "Chapter 2, section 1 §"
+                        }
+                    ],
+                    "next_question": "end_card"
+                }
+            }
+        },
+        "7": {
+            "question_text": "What type of damage has occurred?",
+            "choices": {
+                "Personal damage": {
+                    "next_question": "8"
+                },
+                "Property damage": {
+                    "legal_reason": [
+                        {
+                            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K2",
+                            "text": "Chapter 2, section 1 §"
+                        }
+                    ],
+                    "next_question": "successful"
+                },
+                "Other damages": {
+                    "legal_reason": [
+                        {
+                            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K2",
+                            "text": "Chapter 2, section 1 §"
+                        }
+                    ],
+                    "next_question": "end_card"
+                }
+            }
+        },
+        "8": {
+            "question_text": "Has the person died?",
+            "choices": {
+                "Yes": {
+                    "legal_reason": [
+                        {
+                            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K2",
+                            "text": "Chapter 2, section 1 §"
+                        },
+                        {
+                            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K5",
+                            "text": "Chapter 5, section 1 §"
+                        },
+                        {
+                            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K5",
+                            "text": "Chapter 5, section 2 §"
+                        }
+                    ],
+                    "next_question": "successful"
+                },
+                "No": {
+                    "legal_reason": [
+                        {
+                            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K2",
+                            "text": "Chapter 2, section 1 §"
+                        },
+                        {
+                            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K5",
+                            "text": "Chapter 5, section 7 §"
+                        }
+                    ],
+                    "next_question": "successful"
+                }
+            }
+        },
+        "end_card": {
+            "end_card_text": "The tort is not applicable in this case according to:",
+            "test": "test"
+        },
+        "successful": {
+            "successful_card_text": "The person is liable for the damages according to:"
+        }
+    }
+}
