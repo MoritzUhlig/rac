@@ -4,60 +4,61 @@
 
 body {
     background: linear-gradient(to right, rgb(49, 127, 245), rgb(124, 186, 207), lightblue);
+    font-family: Arial, sans-serif;
+    margin: 0;
 }
 
 #headingDiv {
-    position: relative;
     display: flex;
-    justify-content: center; /* Center the heading */
-    align-items: center; /* Center items vertically */
+    justify-content: center;
+    align-items: center;
     width: 90%;
-    margin: auto; /* Center the entire headingDiv */
-    padding: 3%;
+    margin: auto;
+    padding: 20px;
 }
 
 #lawHeading {
-    font-size: 200%;
+    font-size: 2em;
     text-align: center;
-    
 }
 
 #infoContainer {
-    position: absolute;
-    right: 0; /* Position infoMark at the far right */
-    transition: transform .2s;
+    position: relative;
+    margin-left: 20px;
+    transition: transform 0.2s;
 }
 
 #infoMark {
-    background-color: lightblue;
-    transition: transform .2s;
+    background-color: #fff;
     border: 2px solid black;
     cursor: pointer;
-    padding: 5px;
-    border-radius: 10%; /* Optional: Make the info icon circular */
-    font-size: 150%;
+    padding: 10px;
+    border-radius: 5%;
+    font-size: 1.5em;
+    background-color: #f0f8ff;
 }
 
 #info {
     display: none;
     position: absolute;
-    right: 0; /* Align the info box to the right */
+    right: 0;
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid #333;
     padding: 10px;
     z-index: 999;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     min-height: 50px;
-    width: 300px; /* Set a fixed width for the info box */
+    width: 300px;
 }
 
 #infoContainer:hover #info {
-    display: block; /* Show info when hovering over infoMark */
+    display: block;
+    
 }
 
 #questionDiv {
-    margin-bottom: 10px;
-    font-size: 150%;
+    margin: 20px 0;
+    font-size: 1.5em;
     text-align: center;
     color: black;
     list-style: none;
@@ -66,44 +67,52 @@ body {
 #buttonContainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 }
 
 #buttonContainer > div > button {
-    background-color: lightblue;
-    transition: transform .2s; /* Animation */
-    width: fit-content;
-    margin: 5px;
+    background-color: #f0f8ff;
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: transform 0.2s;
+    width: 120px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 1em;
 }
 
-#buttonContainer > div > button:hover, #infoContainer:hover{
-    transform: scale(1.2);
-    
+#buttonContainer > div > button:hover, #infoContainer:hover {
+    transform: scale(1.1);
 }
 
 #displayContainer {
-    width: 50%;
-    border: 2px solid black;
-    background-color: whitesmoke;
+    width: 60%;
+    border: 2px black;
+    background-color: #ffffff;
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    padding: 5px;
-    border-radius: 5%;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     margin: auto;
+    margin-top: 30px;
 }
 
 #historyDiv {
-    max-height: 100px;
+    max-height: 150px;
     overflow-y: auto;
     border: 1px solid black;
-    width: 40%;
-    padding: 2%;
-    height: 200px;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    width: 60%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+    border-radius: 5px;
 }
 
 #historyDiv > h3 {
     text-align: center;
+    color: black;
 }

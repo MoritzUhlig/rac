@@ -84,11 +84,12 @@ function handleButtonClick(event) {
 
             // Generate links for legal reasons
             choice.legal_reason.forEach(reason => {
-                legalReasonLinks += `<a href="${reason.url}" target="_blank">${reason.text}</a> `;
+                legalReasonLinks += `<br><a href="${reason.url}" target="_blank">${reason.text}</a>`;
+
             });
 
             questionnumber = choice.next_question;
-            questionDiv.innerHTML = questions["questions"][questionnumber].end_card_text + ": " + legalReasonLinks;
+            questionDiv.innerHTML = questions["questions"][questionnumber].end_card_text + legalReasonLinks;
             document.querySelectorAll(".choiceButton").forEach(button => button.style.display = "none");
             document.querySelector("#restart").style.display = "inline-block";
         } else if (choice.next_question === "successful") {
@@ -97,11 +98,11 @@ function handleButtonClick(event) {
 
             // Generate links for legal reasons
             choice.legal_reason.forEach(reason => {
-                legalReasonLinks += `<a href="${reason.url}" target="_blank">${reason.text}</a> `;
+                legalReasonLinks += `<br><a href="${reason.url}" target="_blank">${reason.text}</a>`;
             });
 
             questionnumber = choice.next_question;
-            questionDiv.innerHTML = questions["questions"][questionnumber].successful_card_text + ": " + legalReasonLinks;
+            questionDiv.innerHTML = questions["questions"][questionnumber].successful_card_text + legalReasonLinks;
             document.querySelectorAll(".choiceButton").forEach(button => button.style.display = "none");
             document.querySelector("#restart").style.display = "inline-block";
         } else {
@@ -111,21 +112,20 @@ function handleButtonClick(event) {
             generateButtons();
             document.querySelector("#back").style.display = "inline-block";
         }
-        updateHistory(); // Update the history display after making a choice
+        updateHistory(); 
     }
 }
 
 function logQuestionHistory(questionText, answer) {
-    historyLog.push({ question: questionText, answer: answer }); // Store question and chosen answer
+    historyLog.push({ question: questionText, answer: answer }); 
 }
 
 function updateHistory() {
     const historyDiv = document.querySelector("#historyDiv");
-    historyDiv.innerHTML = "<h3>History</h3>"; // Clear and add a heading
-
+    historyDiv.innerHTML = "<h3>History</h3>"; 
     historyLog.forEach((entry, index) => {
         const historyItem = document.createElement("div");
-        historyItem.innerHTML = `${index + 1}. ${entry.question} - Answer: ${entry.answer}`; // Changed to innerHTML
+        historyItem.innerHTML = `${index + 1}. ${entry.question} - Answer: ${entry.answer}`;
 
         historyDiv.appendChild(historyItem);
     });

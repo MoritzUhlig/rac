@@ -118,6 +118,11 @@
                             "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K2",
                             "text": "Chapter 2, section 1 §"
                         }
+                        ,
+                        {
+                            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K5",
+                            "text": "Chapter 5, section 7 §"
+                        }
                     ],
                     "next_question": "successful"
                 },
@@ -157,10 +162,6 @@
                         {
                             "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K2",
                             "text": "Chapter 2, section 1 §"
-                        },
-                        {
-                            "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K5",
-                            "text": "Chapter 5, section 7 §"
                         }
                     ],
                     "next_question": "successful"
@@ -168,7 +169,7 @@
             }
         },
         "end_card": {
-            "end_card_text": "The tort is not applicable in this case according to:",
+            "end_card_text": "Liability for damages is not applicable for this case according to:",
             "test": "test"
         },
         "successful": {
