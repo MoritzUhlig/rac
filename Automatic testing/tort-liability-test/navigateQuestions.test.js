@@ -171,7 +171,7 @@ describe("Tort Liability Act Rule Tests", () => {
    
    expect(result.legal_reasons).toEqual(expect.arrayContaining([
       { url: "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K2", text: "Chapter 2, section 1 §" },
-      { url: "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K5", text: "Chapter 5, section 7 §" }
+      
     ]));
   });
 
@@ -238,7 +238,8 @@ describe("Tort Liability Act Rule Tests", () => {
     expect(result.final_card).toBe("successful"); 
    
    expect(result.legal_reasons).toEqual(expect.arrayContaining([
-      { url: "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K2", text: "Chapter 2, section 1 §" }
+      { url: "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K2", text: "Chapter 2, section 1 §" },
+      { url: "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K5", text: "Chapter 5, section 7 §" }
     ]));
   });
 
@@ -381,7 +382,7 @@ describe("Tort Liability Act Rule Tests", () => {
    
    expect(result.legal_reasons).toEqual(expect.arrayContaining([
       { url: "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K2", text: "Chapter 2, section 1 §" },
-      { url: "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K5", text: "Chapter 5, section 7 §" }, 
+     
       
     ]));
   });
@@ -414,7 +415,7 @@ describe("Tort Liability Act Rule Tests", () => {
    
    expect(result.legal_reasons).toEqual(expect.arrayContaining([
       { url: "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K2", text: "Chapter 2, section 1 §" },
-         
+      { url: "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/skadestandslag-1972207_sfs-1972-207/#K5", text: "Chapter 5, section 7 §" }
     ]));
   });
 
