@@ -1,4 +1,4 @@
-apiURL = "https://raw.githubusercontent.com/MoritzUhlig/my-json-api/main/data.json";
+apiURL = "https://raw.githubusercontent.com/MoritzUhlig/rac/main/data.json";
 
 let questions;
 let questionnumber = "1";
